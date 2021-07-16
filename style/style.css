@@ -120,12 +120,13 @@ nav{
 
 .main-info{
     border: 0px solid red;
+    width: calc(65% + 1em);
 }
 
 .covid{
     border: 0px solid cyan;
     padding: 2em 0;
-    width: auto;
+    width: calc(100% - 1em);
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -160,7 +161,7 @@ nav{
     border: 0px dashed blue;
     display: flex;
     flex-wrap: wrap;
-    padding: 1em;
+    padding: 1em 0;
 }
 
 .news >*{
@@ -176,6 +177,14 @@ nav{
     border: 0px solid red;
 }
 
+.news-card a{
+    transition: color ease .2s;
+}
+
+.news-card a:hover{
+    color: rgba(0, 0, 0, .5);
+}
+
 i{
     font-size: .7rem;
     opacity: .9;
@@ -184,7 +193,7 @@ i{
 /* latest-news */
 
 .latest-news{
-    border: 0px solid palevioletred;
+    border: 0px solid red
 }
 
 .notification{
@@ -199,12 +208,16 @@ i{
     width: 5%;
 }
 
-.notification a{
+.notif-btn{
     background: linear-gradient(90deg, #FE5C28 0%, rgba(255, 139, 54, 0.9) 88.43%);
     padding: .6em 1em;
     margin: .5em;
     color: white;
     border-radius: 5px;
+}
+
+.notif-btn:hover{
+    background: linear-gradient(337deg, rgba(34,193,195,1) 0%, rgba(243,253,45,1) 100%);
 }
 
 .notification p{
@@ -230,7 +243,6 @@ i{
 .popular-news{
     flex: 1 1 35%;
     border: 0px solid red;
-    padding: 0 1em;
 }
 
 .latest-news-col{
@@ -243,8 +255,16 @@ i{
 .latest-news-card{
     border: 0px solid red;
     display: flex;
-    padding: 0 1em;
+    padding: 0;
     margin-bottom: .7em;
+}
+
+.latest-news-card a{
+    transition: color ease .2s;
+}
+
+.latest-news-card a:hover{
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .latest-news-card-info-container{
@@ -271,9 +291,21 @@ i{
     color: white;
     padding: .5em 2em;
     text-align: center;
+    transition: background ease .2s;
+}
+
+.more-news-btn:hover{
+    background: rgba(0, 0, 0, 0.4);
 }
 
 /* ======================================= */
+
+.popular-news{
+    border: 0px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
 .popular-news-col{
     background: rgba(246, 246, 249, 1);
@@ -294,12 +326,11 @@ i{
     margin: .5em 0;
 }
 
-.popular-news .image{
-    margin-top: 1em;
+.popular-news img{
+    width: 100%;
+    height: auto;
     border: 0px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 1em;
 }
 
 /* download */
@@ -321,6 +352,11 @@ i{
 
 .download img{
     margin: 0 1em;
+    transition: opacity ease .2s;
+}
+
+.download a img:hover{
+    opacity: .5;
 }
 
 /* footer */
@@ -357,6 +393,11 @@ footer{
     border-radius: 5px;
     color: rgba(41, 80, 147, 1);
     font-weight: bold;
+    transition: background ease .2s;
+}
+
+.sub-btn2:hover{
+    background: rgba(128, 161, 218, .5);
 }
 
 .sub-btn2 > img{
@@ -470,8 +511,9 @@ footer{
         text-align: center;
     }
 
-    .popular-news .image img{
-        width: 100%;
+    .popular-news{
+        flex: 1 1 100%;
+        border: 0px solid red;
     }
 
     /* download */
@@ -515,7 +557,7 @@ footer{
     
 }
 
-@media only screen and (min-width: 501px) and (max-width: 800px){
+@media only screen and (min-width: 501px) and (max-width: 1000px){
     header,.section{
         width: 100%;
     }
@@ -586,7 +628,7 @@ footer{
 
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1100px){
+@media only screen and (min-width: 1000px) and (max-width: 1200px){
 
     header,.section{
         width: 90%;
